@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anurag Singh Rajput | Python & Web Developer</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f7fd;--card:#fff;--text:#161a26;--muted:#5b6479;--a:#6366f1;--b:#06b6d4;--c:#ec4899;--line:#e4e7f2;--glow:rgba(99,102,241,.18)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#090b14;--card:#141827;--text:#f0f2fa;--muted:#98a2ba;--a:#818cf8;--b:#22d3ee;--c:#f472b6;--line:#232941;--glow:rgba(129,140,248,.22)}}
+:root[data-theme="dark"]{--bg:#090b14;--card:#141827;--text:#f0f2fa;--muted:#98a2ba;--a:#818cf8;--b:#22d3ee;--c:#f472b6;--line:#232941;--glow:rgba(129,140,248,.22)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 5%;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font-weight:800;font-size:1.15rem;background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav div{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:.93rem;font-weight:500}
+nav a:hover{color:var(--a)}
+section{padding:72px 5%;max-width:1040px;margin:auto}
+h2{font-size:clamp(1.6rem,4vw,2.1rem);margin:0 0 6px;letter-spacing:-.5px}
+h2::after{content:"";display:block;width:54px;height:4px;border-radius:9px;margin-top:8px;background:linear-gradient(90deg,var(--a),var(--c))}
+.sub{color:var(--muted);margin:10px 0 30px}
+.grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+/* hero */
+#home{position:relative;text-align:center;padding-top:96px;padding-bottom:96px}
+#home::before,#home::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;filter:blur(70px);opacity:.55;z-index:-1;animation:float 9s ease-in-out infinite}
+#home::before{background:var(--a);top:10px;left:2%}
+#home::after{background:var(--c);bottom:10px;right:2%;animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-28px) scale(1.08)}}
+.avatar{width:104px;height:104px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;font-size:2.4rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--a),var(--c));box-shadow:0 0 0 6px var(--glow)}
+.tag{display:inline-block;padding:5px 15px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+#home h1{font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.1;margin:14px 0 10px;letter-spacing:-1.5px}
+.role{font-size:clamp(1rem,2.6vw,1.25rem);color:var(--muted);max-width:640px;margin:0 auto 26px}
+.btn{display:inline-block;margin:6px;padding:12px 26px;border-radius:12px;font-weight:600;text-decoration:none;color:#fff;background:linear-gradient(90deg,var(--a),var(--b));box-shadow:0 8px 24px var(--glow);transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.o{background:transparent;color:var(--a);border:1.5px solid var(--a);box-shadow:none}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:44px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 10px}
+.stat b{display:block;font-size:1.9rem}
+.stat span{font-size:.85rem;color:var(--muted)}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 34px var(--glow);border-color:var(--a)}
+.card h3{margin:10px 0 6px;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,var(--glow),transparent);border:1px solid var(--line)}
+.chips span{display:inline-block;margin:5px 5px 0 0;padding:6px 14px;border-radius:99px;font-size:.88rem;font-weight:500;background:var(--card);border:1px solid var(--line)}
+.chips span:hover{border-color:var(--b);color:var(--b)}
+/* timeline */
+.tl{position:relative;padding-left:26px;border-left:2px solid var(--line)}
+.tl div{position:relative;margin-bottom:24px}
+.tl div::before{content:"";position:absolute;left:-34px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 0 4px var(--glow)}
+.tl small{color:var(--b);font-weight:600}
+.tl h3{margin:2px 0;font-size:1.05rem}
+.tl p{margin:0;color:var(--muted);font-size:.93rem}
+.live{display:inline-block;margin-top:12px;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:99px;background:var(--glow);color:var(--a)}
+.cta{text-align:center;padding:44px 22px;background:linear-gradient(135deg,var(--glow),transparent)}
+footer{text-align:center;color:var(--muted);padding:30px 5%;border-top:1px solid var(--line);font-size:.9rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}#home::before,#home::after{animation:none}}
+
+.cert{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;transition:border-color .25s}
+.cert:hover{border-color:var(--b)}
+.cert span{font-size:1.4rem}
+.cert p{margin:0;font-size:.93rem}
+.tech{margin-top:12px;font-size:.78rem;color:var(--b);font-weight:600}
+.card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:.9rem}
+.soc{display:flex;flex-wrap:wrap;justify-content:center}
+</style>
+</head>
+<body>
+<nav><span class="logo">&lt;Anurag /&gt;</span>
+<div><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#certs">Certificates</a><a href="#contact">Contact</a></div></nav>
+
+<section id="home">
+<div class="avatar">A</div>
+<span class="tag">👋 Hello, I'm</span>
+<h1 class="grad">Anurag Singh Rajput</h1>
+<p class="role">Aspiring Software Developer &amp; BCA student building web apps and smart AI tools with Python, Django and Machine Learning.</p>
+<a class="btn" href="#projects">🚀 View My Work</a><a class="btn o" href="#contact">Let's Connect</a>
+<div class="stats">
+<div class="stat"><b class="grad">3rd</b><span>Year BCA</span></div>
+<div class="stat"><b class="grad">8 mo</b><span>Full Stack Program</span></div>
+<div class="stat"><b class="grad">3 mo</b><span>Dev Internship</span></div>
+<div class="stat"><b class="grad">6</b><span>Projects Built</span></div>
+</div>
+</section>
+
+<section id="about" class="rv">
+<h2>About Me</h2><p class="sub">Curious, hands-on and always building.</p>
+<div class="card" style="margin-bottom:26px"><p style="color:var(--text);font-size:1.02rem">I'm a BCA student (3rd year, 5th semester) with hands-on project experience in Python, Django, web development and machine learning. Backed by an 8-month Full Stack Web Development program and a 3-month development internship, I'm looking for a software development internship where I can contribute to real-world projects and grow within a collaborative team.</p>
+<div class="chips" style="margin-top:16px"><span>💻 Software Development</span><span>🌐 Web Development</span><span>🤖 Machine Learning</span><span>📊 Data Analytics</span><span>🧩 Problem Solving</span></div></div>
+<h3 style="margin:0 0 16px">My Journey</h3>
+<div class="tl">
+<div><small>Present</small><h3>Bachelor of Computer Applications (BCA)</h3><p>LNCT Group of Colleges, Bhopal · 3rd Year, 5th Semester</p></div>
+<div><small>Experience · 3 months</small><h3>Software Development Intern, Learning Education Hub</h3><p>Worked on live Python and Django tasks, built front-end pages, handled MySQL schema and queries, and used Git and GitHub with the team.</p></div>
+<div><small>Completed · 8 months</small><h3>Full Stack Web Development with Python</h3><p>Python, Django, HTML, CSS, JavaScript, MySQL, Git and GitHub.</p></div>
+</div>
+</section>
+
+<section id="skills" class="rv">
+<h2>Skills</h2><p class="sub">The tools I work with.</p>
+<div class="grid">
+<div class="card"><h3>🐍 Languages</h3><div class="chips"><span>Python</span><span>Java (Basic)</span></div></div>
+<div class="card"><h3>🌐 Web</h3><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+<div class="card"><h3>⚙️ Framework</h3><div class="chips"><span>Django</span></div></div>
+<div class="card"><h3>🗄️ Databases</h3><div class="chips"><span>MySQL</span><span>SQL</span></div></div>
+<div class="card"><h3>🧰 Tools</h3><div class="chips"><span>Git</span><span>GitHub</span><span>VS Code</span></div></div>
+</div>
+</section>
+
+<section id="services" class="rv">
+<h2>Services</h2><p class="sub">What I can build for you.</p>
+<div class="grid">
+<div class="card"><div class="ic">🌐</div><h3>Web Development</h3><p>Responsive full stack websites and web apps using Python and Django.</p></div>
+<div class="card"><div class="ic">🤖</div><h3>Machine Learning</h3><p>Prediction models, face recognition and data-driven features.</p></div>
+<div class="card"><div class="ic">🗄️</div><h3>Database Solutions</h3><p>MySQL schema design, queries and data handling for your app.</p></div>
+<div class="card"><div class="ic">🛠️</div><h3>Custom Python Tools</h3><p>Apps and automation that solve everyday problems.</p></div>
+</div>
+</section>
+
+<section id="projects" class="rv">
+<h2>Projects</h2><p class="sub">Things I've built and am building.</p>
+<div class="grid">
+<div class="card"><div class="ic">📸</div><h3>Face Recognition Attendance System</h3><p>Identifies registered users from a live camera feed and marks attendance automatically with date and time.</p><span class="live">🔨 ONGOING</span><div class="tech">Python · Machine Learning · Computer Vision</div></div>
+<div class="card"><div class="ic">🤝</div><h3>Skill Exchange Platform</h3><p>Full-stack Django platform where users teach and learn skills, with profiles, skill listings and partner search.</p><div class="tech">Python · Django · JavaScript · HTML · CSS</div></div>
+<div class="card"><div class="ic">🌾</div><h3>Agro AI – Smart Agricultural Assistant</h3><p>Team research project on crop recommendation and disease prediction using ML to give farmers useful insights.</p><div class="tech">Python · Machine Learning</div></div>
+<div class="card"><div class="ic">📈</div><h3>User Conversion Prediction</h3><p>Classification model that predicts the probability of user conversion from historical data.</p><div class="tech">Python · Machine Learning</div></div>
+<div class="card"><div class="ic">💰</div><h3>Expense Tracker</h3><p>Logs income and expenses, calculates the running balance and shows spending summaries by category.</p><div class="tech">Python</div></div>
+<div class="card"><div class="ic">❓</div><h3>Quiz Application</h3><p>Interactive multiple-choice quiz with real-time answer validation and score tracking.</p><div class="tech">Python</div></div>
+</div>
+</section>
+
+<section id="certs" class="rv">
+<h2>Certificates &amp; Achievements</h2><p class="sub">Learning that backs up the work.</p>
+<div class="grid">
+<div class="cert"><span>🎓</span><p>Full Stack Web Development with Python, 8-Month Course Completion</p></div>
+<div class="cert"><span>☁️</span><p>AWS Cloud Practitioner Essentials</p></div>
+<div class="cert"><span>🗄️</span><p>SQL Workshop, Learning Education Hub</p></div>
+<div class="cert"><span>🏅</span><p>Certificate of Accomplishment, Samartix.io</p></div>
+<div class="cert"><span>🖼️</span><p>Image Processing &amp; Machine Learning with Live Projects, LNCT University</p></div>
+<div class="cert"><span>🏆</span><p>HackNova 1.0 Hackathon, Participant</p></div>
+</div>
+</section>
+
+<section id="contact" class="rv">
+<h2>Contact</h2><p class="sub">Open to software development internships and collaborations.</p>
+<div class="card cta">
+<h3 class="grad" style="font-size:1.6rem;margin:0 0 8px">Let's build something great together</h3>
+<p style="margin-bottom:16px">Have an idea or an opportunity? I'd love to hear from you.</p>
+<div class="soc">
+<a class="btn" href="mailto:anuragsinghrajput635@gmail.com">✉️ Email</a>
+<a class="btn o" href="https://www.linkedin.com/in/anurag-singh-rajput-4a367733b" target="_blank" rel="noopener">💼 LinkedIn</a>
+<a class="btn o" href="https://github.com/Anurag-Singh-Rajput155" target="_blank" rel="noopener">🐙 GitHub</a>
+</div>
+<p style="margin-top:14px">📍 Bhopal, Madhya Pradesh, India</p>
+</div>
+</section>
+
+<footer>© 2026 Anurag Singh Rajput · Built with AI for the InAmigos Foundation internship</footer>
+<script>
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
